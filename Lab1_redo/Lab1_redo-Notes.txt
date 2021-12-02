@@ -1,0 +1,32 @@
+FIND FUNCTION
+
+Example:
+String: "This is a test. Find string."
+Find: "st"
+
+Instructions:
+1. Compare each character from the string with the first character of the substring.
+2. If there is a match, save string character location. Store character into new array.
+REMEMBER, this is where you left off in the string so you will need a counter.
+3. Take next character of substring and compare it to the next strings character.
+REMEMBER, this is where you left off in the substring so you will need a counter for here too.
+4. If next character in the substring does not match string, erase new array. Setting array counter back at 0. Also, set substring counter back at 0.
+5. If next character in the substring does match the string, store character into new array.
+6. Repeat until new substring is complete, then break out of the loop and compare strings.
+
+REPLACE FUNCTION
+
+Example:
+String: "I like lemon cubes."
+Find: "lemon"
+Replace: "melon"
+
+Given: # of where the first letter or new word starts
+
+Instructions:
+1. Loop string:
+a.) The start is located where the first character of the substring starts.
+2. Loop new string:
+a.) Take letters of new string and insert into string.
+b.) Keep counter of which letter (index) you left off in new string.
+c.) Break when complete.
