@@ -17,7 +17,7 @@ a.) Make sure the starting point in the loop is the array length going backwards
 
 digitValue FUNCTION
 
-*ASCII Chart*
+*ASCII Table*
 
 Example: '0'
 Decimal: 48
