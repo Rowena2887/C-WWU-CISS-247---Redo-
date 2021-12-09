@@ -1,0 +1,32 @@
+Example: 2E
+Base: 16
+Answer: 46 (decimal)
+
+2: 2*(16^1) = 32
+E: 14*(16^0) = 14
+2E: 46 = 14 + 32
+
+Total: 92
+
+Instructions:
+1. Loop through digit string array and convert them to digit integer array.
+a.) Keep count of how many digits (loops) there are.
+2. Loop through digit integer array and do calculation: digit*(base^loop) = #
+a.) Make sure the starting point in the loop is the array length going backwards.
+3. Add total calculation as you go along.
+
+digitValue FUNCTION
+
+*ASCII Chart*
+
+Example: '0'
+Decimal: 48
+
+0 = 48 - 48
+1 = 49 - 48
+
+Example: 'A'
+Decimal: 65
+
+10 = 65 - 65 + 10
+11 = 66 - 65 + 10
