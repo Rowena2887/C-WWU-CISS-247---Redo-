@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 
     // check for the correct number of command-line arguments
     if (argc < 4) {
-        puts("Usage: ./Lab2 base num1 num2\n");
+        puts("Usage: ./Lab2_redo base num1 num2\n");
         return 1; // Indicates unsuccessful termination.
     }
 
