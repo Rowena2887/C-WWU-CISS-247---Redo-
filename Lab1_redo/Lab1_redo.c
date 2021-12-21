@@ -21,9 +21,11 @@ int main (int argc, char *argv[]) {
     
     // check for 3 command-line arguments
     if (argc < 3) {
-        puts("Usage: ./Lab1 word1 word2\n");
+        puts("Usage: ./Lab1_redo word1 word2\n");
         return 1; // Indicates unsuccessful termination.
     }
+
+    printf("argv[1]: %s", argv[1]);
     
     // check that word1 and word2 are of equal length
     if (strlen(argv[1]) != strlen(argv[2])) {
