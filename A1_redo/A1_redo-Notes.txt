@@ -84,7 +84,7 @@ ii.)) Don't forget to concatenate leading 0s!
 3. Once conversion is completed, concatenate to the original string array.
 4. Once the binary string array has been built, loop through it and group them into septets using seperate arrays.
 
-Trick: 
+Tricks: 
 1. Keep leading 0s - Can't append leading 0s as decimal numbers, so they need to be turned into a string. Strings can be appended!
 2. Cannot insert characters (a[i] = 'A') because of the null character in the end.
 
