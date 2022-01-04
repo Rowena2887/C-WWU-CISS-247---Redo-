@@ -1,0 +1,142 @@
+Program:
+1. Given a seven digit hexadecimal string, convert it into a decimal number array.
+** Helper function: Convert integer to binary.
+2. Exclusive OR with given key2 integer array.
+** Helper function: Convert integer to binary.
+3. Shuffle the nibbles (integer array).
+** Helper function: Convert integer to binary.
+4. Exclusive OR again with given key1 integer array.
+** Helper function: Convert integer to binary.
+5. Rotate septets left by 3 bits.
+** a.) Group the 28 bits in four 7 bit septets.
+** b.) Each septet is rotated to the left by 3 bits.
+6. Translate septets to characters.
+a.) Convert binary number arrays into decimal number.
+b.) Translate using ASCII Table.
+
+Example: D,B,C,2,2,3,3 __ 13,11,12,2,2,3,3 (hexadecimal string, Base 16); string array -> integer array
+Key 1: E,1,8,7,9,F,3 __ 14,1,8,7,9,15,3 (integer, Base 10); integer array
+Key 2: E,F,B,F,9,6,4 __ 14,15,11,15,9,6,4 (integer, Base 10); integer array
+
+(1) FUNCTION hexDec - Lab 2
+
+Instructions:
+1. Anything that is not a hexadecimal digits (>= 'G' or 'g'), exit program.
+
+Tricks:
+1. Cannot print whole integer array.
+2. Cannot use strcmp() function, not comparing strings. Need to compare characters.
+3. == compare addresses not contents.
+
+(2) FUNCTION key2XOR
+
+Results: 3,4,7,13,11,5,7
+
+Instructions:
+1. Loop through array.
+2. With each decimal element XOR it with the corresponding key element.
+
+(3) FUNCTION shuffleNibbles
+
+Results: 7,5,11,3,7,4,13
+
+Instructions:
+1. Create new shuffle array.
+2. Loop through array.
+3. Shuffle the nibbles.
+0 -> 3
+1 -> 5
+2 -> 4
+3 -> 6
+4 -> 2
+5 -> 1
+6 -> 0
+
+(4) FUNCTION key1XOR
+
+Results: 9,4,3,4,14,11,14
+
+(5) FUNCTION groupSeptets, binCon, charBin
+
+Example: 9 -> 1001
+
+9 / 2 = 4, R 1
+4 / 2 = 2, R 0
+2 / 2 = 1, R 0
+1 / 2 = 0, R 1
+
+8 -> 1000
+***
+7 -> 111
+4 -> 100
+3 -> 11
+2 -> 10
+1 -> 1
+
+*** groupSeptets
+
+Instructions:
+1. Convert the first decimal number into binary number and then into a string from the integer array and store it in a variable.
+2. Loop through the rest of the integer array and convert decimal number into binary number. Then into a string!
+a.) Conversion:
+i.)) Turn the binary number into the corresponding character '0' or '1'.
+ii.)) Don't forget to concatenate leading 0s!
+3. Once conversion is completed, concatenate to the original string array.
+4. Once the binary string array has been built, loop through it and group them into septets using seperate arrays.
+
+Trick: 
+1. Keep leading 0s - Can't append leading 0s as decimal numbers, so they need to be turned into a string. Strings can be appended!
+2. Cannot insert characters (a[i] = 'A') because of the null character in the end.
+
+*** binCon - while loop @ https://youtu.be/3SPesNTjySY
+
+*** charBin
+
+Instructions:
+
+num % 10 = last digit
+num / 10 = to shift num right to capture last digit
+
+1. Create binary array.
+2. Loop through binary array reverse order.
+a.) If num matches 0 or 1, insert '0' or '1' character into the string array.
+3. Insert null character after binary string conversion is complete.
+
+(6) FUNCTION rotateSeptets @ https://youtu.be/4kHJuyb9K5o
+
+(7) FUNCTION translateSeptets
+
+Instructions:
+1. Create variable to store decimal number.
+2. Create binary array.
+3. Loop through septets in reverse and compare it to binary array.
+a.) If there is a character match '1', add it to the decimal variable.
+
+*** charSeptets
+
+Instructions:
+1. Create ASCII Table array.
+2. Math!!
+
+Example:
+
+65 -> A
+66 -> B
+97 -> a
+98 -> b
+
+*** ascii table array
+
+0 -> A (65 - 65)
+1 -> B (66 - 65)
+25 -> Z (90 - 65)
+***
+26 -> a (97 - 71)
+27 -> b (98 - 71)
+51 -> z (122 - 71)
+
+Resources:
+***ASCII Table @ https://commons.wikimedia.org/wiki/File:ASCII-Table-wide.svg
+1. How To Convert Decimal to Binary, 7:51 @ https://youtu.be/rsxT4FfRBaM
+2. How To Convert Binary To Decimal @ https://youtu.be/VLflTjd3lWA
+3. Program to Count the Number of Digits @ https://www.programiz.com/c-programming/examples/digits-count
