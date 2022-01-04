@@ -69,7 +69,7 @@ int main (int argc, char *argv[]) {
     printf("\n\n");
     puts("Shuffle the nibbles.");
     for(int i = 0; i < SIZE; i++) {
-        printf("Shuffled Decimal #: %d\t", dec[i]);
+        printf("Shuffled Decimal #: %d\t", shuffle[i]);
     }
 
     key1XOR(shuffle, key1, SIZE);
@@ -77,7 +77,7 @@ int main (int argc, char *argv[]) {
     printf("\n\n");
     puts("Exclusive OR with Key 1.");
     for(int i = 0; i < SIZE; i++) {
-        printf("K1XOR Decimal #: %d\t", dec[i]);
+        printf("K1XOR Decimal #: %d\t", shuffle[i]);
     }
 
     // Four 7-bit septets storage
