@@ -18,7 +18,7 @@
 void toLower(char *word);
 int hamDist(char *word, char *dictWord);
 
-int main (int argc, char *argv[]) {
+int main() {
     // Dictionary word
     char dictWord[LENGTH];
     
