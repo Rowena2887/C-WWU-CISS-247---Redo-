@@ -17,7 +17,7 @@ Idea:
 fseek - Unable to jump file pointer since the word list dictionary is in alphabetical order, not numerical order.
 
 Trick:
-The word list dictionary is in alphabetical order, so the hamming distance fluctuates. Unfortunately, the program cannot lookup previous words once it has been scanned, so it cannot compare hamming distance from previous words.
+The word list dictionary is in alphabetical order, so the hamming distance fluctuates. Unfortunately, the program cannot lookup previous words once it has been scanned, so it cannot compare previous hamming distances.
 
 Resources:
 1. How to compute the Hamming distance @ https://youtu.be/P02mJhS9qQ4
