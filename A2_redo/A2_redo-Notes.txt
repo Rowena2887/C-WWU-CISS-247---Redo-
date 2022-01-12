@@ -1,0 +1,23 @@
+Program:
+1. Ask the user to enter an English word from the keyboard.
+a.) Make sure user word is in lowercase!
+2. Compare user word to a list of English words supplied in a data file.
+a.) Create data file with a list of English words and process it. - File Processing
+3. Notify the user if the word is found in the word list dictionary.
+4. If the entered word is not found in the word list dictionary, then the program will suggest spelling alternatives/corrections. (Hamming Distance)
+a.) Keep hamming distance at a 1 to get the most accurate spelling results.
+
+FUNCTION hamDist
+1. Loop through the user word.
+a.) Compare it with dictionary word.
+b.) Keep count of how many characters match.
+c.) Subtract the length of the user word with matches to get hamming distance.
+
+Idea:
+fseek - Unable to jump file pointer since the word list dictionary is in alphabetical order, not numerical order.
+
+Trick:
+The word list dictionary is in alphabetical order, so the hamming distance fluctuates. Unfortunately, the program cannot lookup previous words once it has been scanned, so it cannot compare hamming distance from previous words.
+
+Resources:
+1. How to compute the Hamming distance @ https://youtu.be/P02mJhS9qQ4
