@@ -1,0 +1,141 @@
+Program:
+1. The user inputs digit(s) and scale size.
+a.) Convert digit string into integers.
+2. The program prints the integers according to the submitted scale size.
+
+FUNCTION intTrans
+
+Example:
+'0' -> 48 (48 - 48 = 0)
+'1' -> 49 (49 - 48 = 1)
+'8' -> 56 (56 - 48 = 8)
+'9' -> 57 (57 - 48 = 9)
+
+Instructions:
+1. Loop through digits string and translate them into integers.
+a.) Cannot use atoi() because the function is expecting a string not a character.
+b.) Can directly subtract characters since characters are integers under the hood in C.
+
+Tricks: 
+1. Don't use atoi(argv[1]) because it will translate the string of integers into one whole integer rather than a string of integers.
+2. Split the integer by zones, top, middle, and bottom so the program can focus on printing one section at a time. Keep it simple!
+3. Instead of treating each integer separately, by printing one integer at a time, treat them as one giant singular integer. Meaning, don't focus on printing individual integers, focus on printing all the integers based on levels (nested for loops).
+4. The middle zone was the most challenging since integers are oddly shaped, so the middle zone was split up by three parts, upper (level < scale / 2), middle (level == scale / 2), and lower (level > scale / 2). Print according to levels and insert new line when needed.
+5. Scaling needs to be doubled every time to keep the middle zone equally consistent for oddly shaped integers (2, 3, 4, 5, 6, 8, 9).
+6. Keep track of how many digits the user inputs so the program prints exactly as shown.
+
+***Scaling @ https://youtu.be/NBAcwrD7KaU
+
+Example:
+0
+ _
+| |
+|_|
+ ___
+|   |
+|   |
+|   |
+|___|
+
+1
+
+
+|
+|
+
+
+|
+|
+|
+|
+
+2
+ _
+ _|
+|_
+
+ __
+   |
+ __|
+|
+|__
+
+3
+_
+_|
+_|
+
+__
+  |
+__|
+  |
+__|
+
+4
+
+|_|
+  |
+
+|  |
+|__|
+   |
+   |
+
+5
+ _
+|_
+ _|
+
+ __
+|
+|__
+   |
+ __|
+
+6
+ _
+|_
+|_|
+
+ __
+|
+|__
+|  |
+|__|
+
+7
+_
+ |
+ |
+___
+   |
+   |
+   |
+   |
+
+8
+ _
+|_|
+|_|
+
+ __
+|  |
+|__|
+|  |
+|__|
+
+9
+ _
+|_|
+ _|
+
+ __
+|  |
+|__|
+   |
+ __|
+
+Resources:
+The if statement is called a single selection statement because it selects or ignores a single action. 
+The if…else statement is called a double-selection statement because it selects between two different actions. 
+The switch statement is called a multiple-selection statement because it selects among many different actions.
